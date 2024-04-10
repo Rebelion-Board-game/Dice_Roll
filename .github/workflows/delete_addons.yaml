@@ -1,0 +1,19 @@
+---
+name: delete addons
+
+on:
+  push:
+    branches:
+      - actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Remove addons folder
+      run: rm -rf addons
+
