@@ -1,5 +1,5 @@
 ---
-name: delete addons
+name: delete addons folder
 
 on:
   push:
