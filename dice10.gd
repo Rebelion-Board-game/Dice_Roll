@@ -3,6 +3,7 @@ extends RigidBody3D
 const ROLL_STRENGHT = 200
 
 var start_pos
+var clicked = false
 @onready var nodes = $Faces.get_children()
 
 signal roll_finished(value)
@@ -13,6 +14,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
+		clicked = true
 		_roll()
 		
 func _roll():
@@ -35,13 +37,11 @@ func _roll():
 
 func _on_sleeping_state_changed():
 	var result = null
-	if sleeping:
-		for node in nodes:
-			if result == null:
-				result = node
-			if result.global_transform.origin.y < node.global_transform.origin.y:
-				result = node
-
-	print(result.name)
-#func _process(delta):
-	#print($Node3D/D2.get_collider())
+	if clicked:
+		if sleeping:
+			for node in nodes:
+				if result == null:
+					result = node
+				if result.global_transform.origin.y < node.global_transform.origin.y:
+					result = node
+		print(result.name)

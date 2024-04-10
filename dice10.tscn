@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ytu1q2cj3e01"]
 
-[ext_resource type="Script" path="res://dicer10.gd" id="1_mo8w2"]
+[ext_resource type="Script" path="res://dice10.gd" id="1_mo8w2"]
 [ext_resource type="Texture2D" uid="uid://bnrfduitcv08b" path="res://textures/DefaultMaterial_albedo.jpg" id="2_k38wa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ts8ge"]
@@ -41,7 +41,7 @@ albedo_texture = ExtResource("2_k38wa")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_16hag"]
 points = PackedVector3Array(-4.46569e-07, -0.00239839, 0.000350971, 0.00228079, -0.000741394, 0.000351505, -4.46569e-07, -4.6473e-07, 0.00272867, -0.00228079, -0.000741394, 0.000351505, -0.00140964, -0.00194059, -0.000352563, 0.0014092, -0.00194059, -0.000352563, 0.00228079, 0.000740934, -0.000352563, 0.0014092, 0.00193966, 0.000351505, -0.00140964, 0.00193966, 0.000351505, -0.00228079, 0.000740934, -0.000352563, -4.46569e-07, -4.6473e-07, -0.00272866, -4.46569e-07, 0.0023984, -0.000351495)
 
-[node name="untitled" type="RigidBody3D"]
+[node name="D10" type="RigidBody3D"]
 gravity_scale = 0.2
 script = ExtResource("1_mo8w2")
 
@@ -61,16 +61,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0524875, -0.164433)
 [node name="D10" type="Node3D" parent="Faces"]
 
 [node name="D6" type="Node3D" parent="Faces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0943118, 0, 0.277075)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.094, 0.04, 0.277)
 
 [node name="D4" type="Node3D" parent="Faces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117813, 0, 0.114591)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117813, 0.0185916, 0.114591)
 
 [node name="D2" type="Node3D" parent="Faces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0808526, 0, 0.304606)
 
 [node name="D8" type="Node3D" parent="Faces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155, 0, 0.113137)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155, 0.0145684, 0.113137)
 
 [node name="D5" type="Node3D" parent="Faces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, -0.144, 0.202)
@@ -79,7 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, -0.144, 0.202)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0972347, -0.143937, 0.0506074)
 
 [node name="D9" type="Node3D" parent="Faces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0123864, -0.143937, 0.316115)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001, -0.14, 0.316)
 
 [node name="D1" type="Node3D" parent="Faces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144723, -0.141074, 0.207849)

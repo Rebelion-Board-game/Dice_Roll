@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfuby0kinj8vw"]
 
-[ext_resource type="PackedScene" uid="uid://ytu1q2cj3e01" path="res://dicer10.tscn" id="2_v34m7"]
+[ext_resource type="PackedScene" uid="uid://ytu1q2cj3e01" path="res://dice10.tscn" id="2_v34m7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pg6s6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -44,12 +44,6 @@ mesh = SubResource("PlaneMesh_4gkp7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_iv7b3")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.66341, -0.780249)
-
-[node name="untitled2" parent="." instance=ExtResource("2_v34m7")]
-transform = Transform3D(1, 0, 0, 0, 0.620628, 0.784105, 0, -0.784105, 0.620628, -0.0516406, 0.889614, -0.285185)
-
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.36089, 0.541183, 0)
 mesh = SubResource("BoxMesh_yafm0")
@@ -85,3 +79,10 @@ mesh = SubResource("BoxMesh_yafm0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_5ciu0")
+
+[node name="D10" parent="." instance=ExtResource("2_v34m7")]
+transform = Transform3D(1, 0, 0, 0, 0.620628, 0.784105, 0, -0.784105, 0.620628, -0.0516406, 0.131607, -0.285185)
+gravity_scale = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.66341, -0.780249)
