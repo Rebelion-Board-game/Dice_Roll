@@ -41,9 +41,7 @@ albedo_texture = ExtResource("2_k38wa")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_16hag"]
 points = PackedVector3Array(-4.46569e-07, -0.00239839, 0.000350971, 0.00228079, -0.000741394, 0.000351505, -4.46569e-07, -4.6473e-07, 0.00272867, -0.00228079, -0.000741394, 0.000351505, -0.00140964, -0.00194059, -0.000352563, 0.0014092, -0.00194059, -0.000352563, 0.00228079, 0.000740934, -0.000352563, 0.0014092, 0.00193966, 0.000351505, -0.00140964, 0.00193966, 0.000351505, -0.00228079, 0.000740934, -0.000352563, -4.46569e-07, -4.6473e-07, -0.00272866, -4.46569e-07, 0.0023984, -0.000351495)
 
-[node name="untitled" type="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-gravity_scale = 0.2
+[node name="untitled" type="Node3D"]
 script = ExtResource("1_mo8w2")
 
 [node name="Cone" type="MeshInstance3D" parent="."]
@@ -60,42 +58,40 @@ shape = SubResource("ConvexPolygonShape3D_16hag")
 
 [node name="D1" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.0178812, 0.881201, -0.472401, 0.343946, 0.43822, 0.83046, 0.938819, -0.17733, -0.29525, -0.148756, -0.0970232, 0.0671465)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D7" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(-0.790038, 0.290865, -0.539664, -0.268609, 0.627056, 0.731198, 0.551079, 0.722633, -0.417269, -0.106545, -0.104044, -0.124102)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D3" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.774944, -0.498046, -0.389116, 4.47035e-08, 0.615661, -0.788011, 0.632029, 0.610664, 0.477103, 0.110444, -0.0784916, -0.121184)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D2" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.656059, -0.594719, -0.464646, -5.38228e-08, -0.615661, 0.788011, -0.75471, -0.516981, -0.40391, 0.0930501, 0.105891, 0.129628)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D5" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.273089, -0.791681, 0.546502, -0.154226, 0.524717, 0.83719, -0.949546, -0.312912, 0.0211966, 0.172642, -0.0467233, 0.0858744)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D6" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.906308, 0.333028, 0.26019, 0, -0.615661, 0.788011, 0.422618, -0.71418, -0.557979, -0.0998738, 0.0938903, 0.120346)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D8" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(-0.572949, -0.774212, -0.268935, 0.516294, -0.595783, 0.61521, -0.63653, 0.213634, 0.741074, 0.132048, 0.114643, -0.0367311)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D9" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(-0.532344, -0.0197427, -0.846299, 0.838671, 0.123601, -0.53043, 0.115075, -0.992137, -0.0492402, -0.00390404, -0.101468, 0.14792)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D10" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.432302, 0.0964647, 0.896554, 0.739167, -0.607385, -0.29106, 0.516477, 0.788529, -0.333878, -0.0202048, 0.115428, -0.155804)
-target_position = Vector3(0, -0.2, 0)
+target_position = Vector3(0, -0.1, 0)
 
 [node name="D4" type="RayCast3D" parent="Node3D"]
 transform = Transform3D(0.156777, 0.716123, -0.680139, -0.0578456, -0.680814, -0.730167, -0.985939, 0.153816, -0.0653114, -0.122761, 0.125955, -0.0224499)
-target_position = Vector3(0, -0.2, 0)
-
-[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]
+target_position = Vector3(0, -0.1, 0)
