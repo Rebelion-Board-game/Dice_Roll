@@ -17,3 +17,11 @@ jobs:
     - name: Remove addons folder
       run: rm -rf addons
 
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add .
+        git commit -m "Remove addons folder [${{ github.event.pull_request.title }}]"  # Dodanie tytułu PR do komunikatu commita
+        git push origin ${{ github.ref }}
+
