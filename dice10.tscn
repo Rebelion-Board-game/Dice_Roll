@@ -87,4 +87,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144723, -0.141074, 0.20784
 [node name="D7" type="Node3D" parent="Faces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0857001, -0.143937, 0.0431801)
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
