@@ -10,4 +10,4 @@ The Dice_Roll plugin for Godot 4.0 is designed to enhance your gaming experience
 ![error](./Screenshot.png)
 
 ## Usage
-add scene main.tscn to your game and connect '''roll_finished''' singal
+add scene main.tscn to your game and connect ```roll_finished``` signal
