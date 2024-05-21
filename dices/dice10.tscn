@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ytu1q2cj3e01"]
+[gd_scene load_steps=9 format=3 uid="uid://ytu1q2cj3e01"]
 
-[ext_resource type="Script" path="res://dice10.gd" id="1_mo8w2"]
-[ext_resource type="Texture2D" uid="uid://bnrfduitcv08b" path="res://textures/DefaultMaterial_albedo.jpg" id="2_k38wa"]
+[ext_resource type="Script" path="res://dices/dice10.gd" id="1_jsmjy"]
+[ext_resource type="Texture2D" uid="uid://bnrfduitcv08b" path="res://textures/DefaultMaterial_albedo.jpg" id="2_pslw7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ts8ge"]
 
@@ -36,14 +36,17 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fe4iv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jo4lx"]
-albedo_texture = ExtResource("2_k38wa")
+albedo_texture = ExtResource("2_pslw7")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_16hag"]
-points = PackedVector3Array(-4.46569e-07, -0.00239839, 0.000350971, 0.00228079, -0.000741394, 0.000351505, -4.46569e-07, -4.6473e-07, 0.00272867, -0.00228079, -0.000741394, 0.000351505, -0.00140964, -0.00194059, -0.000352563, 0.0014092, -0.00194059, -0.000352563, 0.00228079, 0.000740934, -0.000352563, 0.0014092, 0.00193966, 0.000351505, -0.00140964, 0.00193966, 0.000351505, -0.00228079, 0.000740934, -0.000352563, -4.46569e-07, -4.6473e-07, -0.00272866, -4.46569e-07, 0.0023984, -0.000351495)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_elpbo"]
+data = PackedVector3Array(0, 0, -0.0027, 0.0014, 0.0019, 0.0004, 0, 0.0024, -0.0004, 0, 0, -0.0027, 0.0023, 0.0007, -0.0004, 0.0014, 0.0019, 0.0004, 0, 0, 0.0027, 0.0014, -0.0019, -0.0004, 0, -0.0024, 0.0004, 0, 0, 0.0027, 0.0023, -0.0007, 0.0004, 0.0014, -0.0019, -0.0004, 0, 0, 0.0027, -0.0014, -0.0019, -0.0004, -0.0023, -0.0007, 0.0004, 0, 0, 0.0027, 0, -0.0024, 0.0004, -0.0014, -0.0019, -0.0004, 0, 0, 0.0027, -0.0023, 0.0007, -0.0004, -0.0014, 0.0019, 0.0004, 0, 0, 0.0027, -0.0023, -0.0007, 0.0004, -0.0023, 0.0007, -0.0004, 0, 0, -0.0027, -0.0023, -0.0007, 0.0004, -0.0014, -0.0019, -0.0004, 0, 0, -0.0027, -0.0023, 0.0007, -0.0004, -0.0023, -0.0007, 0.0004, 0, 0, 0.0027, 0.0023, 0.0007, -0.0004, 0.0023, -0.0007, 0.0004, 0, 0, 0.0027, 0.0014, 0.0019, 0.0004, 0.0023, 0.0007, -0.0004, 0, 0, -0.0027, -0.0014, 0.0019, 0.0004, -0.0023, 0.0007, -0.0004, 0, 0, -0.0027, 0, 0.0024, -0.0004, -0.0014, 0.0019, 0.0004, -0.0014, -0.0019, -0.0004, 0.0014, -0.0019, -0.0004, 0, 0, -0.0027, -0.0014, -0.0019, -0.0004, 0, -0.0024, 0.0004, 0.0014, -0.0019, -0.0004, 0, 0, -0.0027, 0.0023, -0.0007, 0.0004, 0.0023, 0.0007, -0.0004, 0, 0, -0.0027, 0.0014, -0.0019, -0.0004, 0.0023, -0.0007, 0.0004, -0.0014, 0.0019, 0.0004, 0.0014, 0.0019, 0.0004, 0, 0, 0.0027, -0.0014, 0.0019, 0.0004, 0, 0.0024, -0.0004, 0.0014, 0.0019, 0.0004)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8c0dv"]
 
 [node name="D10" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 gravity_scale = 0.2
-script = ExtResource("1_mo8w2")
+script = ExtResource("1_jsmjy")
 
 [node name="Cone" type="MeshInstance3D" parent="."]
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -0.000921726, 8.9407e-08, -0.000341892)
@@ -51,9 +54,10 @@ mesh = SubResource("ArrayMesh_wdwjc")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_jo4lx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_16hag")
+[node name="StaticBody3D" type="StaticBody3D" parent="Cone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_elpbo")
 
 [node name="Faces" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0524875, -0.164433)
@@ -88,6 +92,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144723, -0.141074, 0.20784
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0857001, -0.143937, 0.0431801)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_8c0dv")
 
 [connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

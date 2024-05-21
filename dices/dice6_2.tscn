@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://pbfd7cht6ne0"]
+
+[ext_resource type="PackedScene" uid="uid://bvg0d5s2juwrw" path="res://dices/dice6.tscn" id="1_wjj6a"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="D6" parent="." instance=ExtResource("1_wjj6a")]
+
+[editable path="D6"]

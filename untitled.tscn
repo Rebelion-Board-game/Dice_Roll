@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://smn5hng680np"]
+
+[ext_resource type="PackedScene" uid="uid://dhsmbiybno0g7" path="res://models/untitled.glb" id="1_qbdif"]
+
+[node name="untitled" instance=ExtResource("1_qbdif")]
+
+[node name="D6" parent="." index="1"]
+transform = Transform3D(0.00544697, -0.00177613, -0.00819609, -0.000346072, 0.00971723, -0.00233576, 0.00837919, 0.00155592, 0.00523148, 0.159675, 0.18328, 0.346776)

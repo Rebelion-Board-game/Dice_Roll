@@ -1,24 +1,24 @@
 extends RigidBody3D
 
+class_name Dice
+
+signal roll_finished(value)
+
 const ROLL_STRENGHT = 300
+
+@onready var nodes = $Faces.get_children()
 
 var start_pos
 var clicked = false
-@onready var nodes = $Faces.get_children()
-
-signal roll_finished(value)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_pos = global_position
+	var parent = get_parent()
+	parent.roll.connect(_roll)
 
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		if sleeping:
-			clicked = true
-			_roll()
-		
 func _roll():
+	clicked = true
 	sleeping = false
 	freeze = false
 	#transform.origin = start_pos
@@ -35,7 +35,7 @@ func _roll():
 	angular_velocity = throw_vector * ROLL_STRENGHT / 2
 	apply_central_force(throw_vector * ROLL_STRENGHT)
 	
-	$Timer.start(3)
+	$Timer.start(6)
 
 func _on_sleeping_state_changed():
 	var result = null
@@ -46,9 +46,8 @@ func _on_sleeping_state_changed():
 					result = node
 				if result.global_transform.origin.y < node.global_transform.origin.y:
 					result = node
-		#print(result.name)
-		emit_signal("roll_finished",int(result.name.replace("D","")))
-
+			emit_signal("roll_finished",int(result.name.replace("D","")))
+			clicked = false
 
 func _on_timer_timeout():
 	if sleeping == false:

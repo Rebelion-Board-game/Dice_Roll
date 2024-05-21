@@ -14,6 +14,15 @@ config/name="DiceRoll"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug]
+
+gdscript/warnings/unused_variable=0
+
+[filesystem]
+
+import/fbx/enabled=false
+
 [physics]
 
 3d/physics_engine="JoltPhysics3D"
+3d/default_gravity_vector=Vector3(0, 1, 0)
